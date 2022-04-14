@@ -1,17 +1,16 @@
-# federal income bracket dictionary
-federal_brackets = {2021: ((10, 12, 22, 24, 32, 35, 37), (9950, 40525, 86375, 164925, 209425, 523600, 523601))}
-
-# below is a dictionary that contains the tax rate for its equivalent income brackets
-# each key represents a year and the value is a set of tuples nested within a tuple
-# the first tuple is the tax rate, while the second tuple is the income bracket upper band (the last income bracket is the lower bound however)
-california_brackets = {2021: ((1, 2, 4, 6, 8, 9.3, 10.3, 11.3, 12.3),
-                              (9325, 22107, 34892, 48435, 61214, 312686, 375221, 625369, 625370))}
-
-# dictionary that contains the state as the key and the
-state_dict = {"california": california_brackets}
-
-
 def find_tax_bracket(year, state):
+    # federal income bracket dictionary
+    federal_brackets = {2021: ((10, 12, 22, 24, 32, 35, 37), (9950, 40525, 86375, 164925, 209425, 523600, 523601))}
+
+    # below is a dictionary that contains the tax rate for its equivalent income brackets
+    # each key represents a year and the value is a set of tuples nested within a tuple
+    # the first tuple is the tax rate, while the second tuple is the income bracket upper band (the last income bracket is the lower bound however)
+    california_brackets = {2021: ((1, 2, 4, 6, 8, 9.3, 10.3, 11.3, 12.3),
+                                  (9325, 22107, 34892, 48435, 61214, 312686, 375221, 625369, 625370))}
+
+    # dictionary that contains the state as the key and the
+    state_dict = {"california": california_brackets}
+
     for year_key in federal_brackets:
         if year == year_key:
             fed_bracket_tuple = federal_brackets[year_key]
