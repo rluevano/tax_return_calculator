@@ -1,3 +1,10 @@
+"""
+
+Author: RLuevano
+
+"""
+
+
 def gather_info():
     print("This program will calculate the total income tax owed for both the federal government as well as state\n")
     year = input("Enter the year in which to calculate your income tax: ")
