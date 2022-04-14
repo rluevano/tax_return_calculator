@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import user_information_capture
+import tax_bracket_finder
+import tax_calculator
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    year, state, salary, hsa_gain, retirement_401k, employer_401k_percent, employer_401k_cap = \
+        user_information_capture.gather_info()
+
+    fed_tax_rate, fed_income_band, state_tax_rate, state_income_band = \
+        tax_bracket_finder.find_tax_bracket(year, state)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print('done')
